@@ -1,0 +1,104 @@
+
+pirate.png
+size: 1920,1445
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm1_L
+  rotate: true
+  xy: 1302, 1170
+  size: 273, 606
+  orig: 273, 606
+  offset: 0, 0
+  index: -1
+Arm1_R
+  rotate: false
+  xy: 981, 62
+  size: 271, 639
+  orig: 271, 640
+  offset: 0, 1
+  index: -1
+Collar1
+  rotate: false
+  xy: 1519, 29
+  size: 364, 252
+  orig: 366, 255
+  offset: 1, 2
+  index: -1
+Face1_001
+  rotate: false
+  xy: 1302, 755
+  size: 474, 413
+  orig: 476, 415
+  offset: 1, 1
+  index: -1
+Foot1_L
+  rotate: true
+  xy: 1778, 944
+  size: 224, 140
+  orig: 225, 140
+  offset: 1, 0
+  index: -1
+Foot1_R
+  rotate: true
+  xy: 1778, 714
+  size: 228, 137
+  orig: 228, 137
+  offset: 0, 0
+  index: -1
+Girdle1
+  rotate: false
+  xy: 1519, 283
+  size: 366, 185
+  orig: 368, 187
+  offset: 1, 1
+  index: -1
+Leg1_L
+  rotate: false
+  xy: 2, 520
+  size: 403, 923
+  orig: 403, 923
+  offset: 0, 0
+  index: -1
+Leg1_R
+  rotate: false
+  xy: 407, 575
+  size: 439, 868
+  orig: 439, 868
+  offset: 0, 0
+  index: -1
+Sleeve1_L
+  rotate: true
+  xy: 1302, 470
+  size: 283, 474
+  orig: 283, 474
+  offset: 0, 0
+  index: -1
+Sleeve1_R
+  rotate: false
+  xy: 1254, 2
+  size: 263, 466
+  orig: 263, 466
+  offset: 0, 0
+  index: -1
+Underwear1
+  rotate: false
+  xy: 2, 4
+  size: 503, 514
+  orig: 518, 517
+  offset: 14, 2
+  index: -1
+Upper_Body1
+  rotate: false
+  xy: 507, 31
+  size: 472, 542
+  orig: 474, 544
+  offset: 1, 1
+  index: -1
+Weapon_Knife1
+  rotate: true
+  xy: 848, 703
+  size: 740, 452
+  orig: 743, 454
+  offset: 2, 1
+  index: -1

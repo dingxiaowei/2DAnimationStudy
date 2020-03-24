@@ -1,0 +1,251 @@
+
+man.png
+size: 3819,2069
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_L
+  rotate: false
+  xy: 746, 2
+  size: 271, 640
+  orig: 271, 640
+  offset: 0, 0
+  index: -1
+Arm_R
+  rotate: false
+  xy: 1019, 36
+  size: 273, 606
+  orig: 273, 606
+  offset: 0, 0
+  index: -1
+Armor
+  rotate: false
+  xy: 3348, 1075
+  size: 469, 448
+  orig: 471, 468
+  offset: 1, 2
+  index: -1
+Collar
+  rotate: false
+  xy: 2760, 799
+  size: 375, 259
+  orig: 377, 262
+  offset: 1, 2
+  index: -1
+Collar1
+  rotate: false
+  xy: 2960, 146
+  size: 364, 252
+  orig: 366, 255
+  offset: 1, 2
+  index: -1
+Crotch
+  rotate: false
+  xy: 1892, 332
+  size: 325, 413
+  orig: 326, 418
+  offset: 1, 5
+  index: -1
+Face1_001
+  rotate: false
+  xy: 2219, 272
+  size: 474, 413
+  orig: 476, 415
+  offset: 1, 1
+  index: -1
+Face_001
+  rotate: false
+  xy: 2960, 400
+  size: 340, 397
+  orig: 342, 399
+  offset: 1, 1
+  index: -1
+Face_002
+  rotate: false
+  xy: 3302, 407
+  size: 340, 397
+  orig: 342, 399
+  offset: 1, 1
+  index: -1
+Face_003
+  rotate: false
+  xy: 3326, 8
+  size: 340, 397
+  orig: 342, 399
+  offset: 1, 1
+  index: -1
+Foot_L
+  rotate: false
+  xy: 1975, 191
+  size: 225, 139
+  orig: 225, 140
+  offset: 0, 1
+  index: -1
+Foot_R
+  rotate: false
+  xy: 2695, 192
+  size: 228, 135
+  orig: 228, 137
+  offset: 0, 2
+  index: -1
+Girdle
+  rotate: false
+  xy: 2, 40
+  size: 399, 320
+  orig: 402, 322
+  offset: 1, 1
+  index: -1
+Girdle1
+  rotate: false
+  xy: 1607, 10
+  size: 366, 185
+  orig: 368, 187
+  offset: 1, 1
+  index: -1
+Girdle_Ribbon
+  rotate: false
+  xy: 2609, 797
+  size: 149, 302
+  orig: 149, 302
+  offset: 0, 0
+  index: -1
+Gun
+  rotate: false
+  xy: 3137, 806
+  size: 606, 43
+  orig: 608, 45
+  offset: 1, 1
+  index: -1
+Hair_001
+  rotate: false
+  xy: 403, 39
+  size: 341, 321
+  orig: 343, 324
+  offset: 1, 2
+  index: -1
+Hair_Ribbon
+  rotate: false
+  xy: 744, 661
+  size: 175, 153
+  orig: 175, 153
+  offset: 0, 0
+  index: -1
+Leg1_L
+  rotate: false
+  xy: 1387, 673
+  size: 403, 922
+  orig: 403, 923
+  offset: 0, 0
+  index: -1
+Leg1_R
+  rotate: false
+  xy: 946, 644
+  size: 439, 868
+  orig: 439, 868
+  offset: 0, 0
+  index: -1
+Leg_L
+  rotate: false
+  xy: 2254, 687
+  size: 353, 864
+  orig: 354, 865
+  offset: 0, 0
+  index: -1
+Leg_R
+  rotate: false
+  xy: 1792, 747
+  size: 460, 848
+  orig: 464, 848
+  offset: 4, 0
+  index: -1
+Sleeve1_L
+  rotate: false
+  xy: 1607, 197
+  size: 283, 474
+  orig: 283, 474
+  offset: 0, 0
+  index: -1
+Sleeve1_R
+  rotate: false
+  xy: 2695, 329
+  size: 263, 466
+  orig: 263, 466
+  offset: 0, 0
+  index: -1
+Sleeve_L
+  rotate: false
+  xy: 1294, 114
+  size: 311, 528
+  orig: 342, 528
+  offset: 31, 0
+  index: -1
+Sleeve_R
+  rotate: false
+  xy: 2609, 1101
+  size: 245, 450
+  orig: 245, 450
+  offset: 0, 0
+  index: -1
+Underwear
+  rotate: false
+  xy: 2856, 1060
+  size: 490, 463
+  orig: 492, 465
+  offset: 1, 1
+  index: -1
+Underwear1
+  rotate: false
+  xy: 2351, 1553
+  size: 503, 514
+  orig: 518, 517
+  offset: 14, 2
+  index: -1
+Upper_Body
+  rotate: false
+  xy: 2856, 1525
+  size: 472, 542
+  orig: 474, 544
+  offset: 1, 1
+  index: -1
+Upper_Body1
+  rotate: false
+  xy: 3330, 1525
+  size: 472, 542
+  orig: 474, 544
+  offset: 1, 1
+  index: -1
+Weapon_Knife01
+  rotate: false
+  xy: 1383, 1597
+  size: 966, 470
+  orig: 969, 473
+  offset: 2, 2
+  index: -1
+Weapon_Knife1
+  rotate: false
+  xy: 2, 362
+  size: 740, 452
+  orig: 743, 454
+  offset: 2, 1
+  index: -1
+arch
+  rotate: false
+  xy: 2, 816
+  size: 942, 696
+  orig: 3508, 2480
+  offset: 1370, 951
+  index: -1
+dagger
+  rotate: false
+  xy: 3348, 851
+  size: 451, 222
+  orig: 3508, 2480
+  offset: 1410, 1137
+  index: -1
+staff
+  rotate: false
+  xy: 2, 1514
+  size: 1379, 553
+  orig: 3508, 2480
+  offset: 1077, 972
+  index: -1
