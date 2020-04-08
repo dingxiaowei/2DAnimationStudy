@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Head2Asset
   m_EditorClassIdentifier: 
   equipType: 0
-  sprite: {fileID: 1174260175620740453, guid: 7fadb84bf1f733342aab2c3a67ed98ab, type: 3}
-  description: Head_2
+  sprite: {fileID: -4598151310857400262, guid: 7fadb84bf1f733342aab2c3a67ed98ab, type: 3}
+  description: Head2

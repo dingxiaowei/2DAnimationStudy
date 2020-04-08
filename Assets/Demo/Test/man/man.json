@@ -1,10 +1,10 @@
 {
 "skeleton": {
-	"hash": "+1u72Wox5Vgg9JU3JOuKbP979OI",
+	"hash": "fEQCHpGKpHlqGpIumAuaIkjwcf8",
 	"spine": "3.8.86",
-	"x": -920.76,
+	"x": -481.04,
 	"y": -0.7,
-	"width": 1676.98,
+	"width": 994.12,
 	"height": 1792.72,
 	"images": "./images/",
 	"audio": "D:/2D/02"
@@ -2184,6 +2184,55 @@
 				"rotate": [
 					{ "curve": "stepped" },
 					{ "time": 1 }
+				]
+			}
+		}
+	},
+	"Atk2": {
+		"bones": {
+			"Weapon": {
+				"rotate": [
+					{ "curve": "stepped" },
+					{ "time": 1 }
+				],
+				"translate": [
+					{ "time": 0.3333, "x": 2.66, "y": -0.76 }
+				],
+				"shear": [
+					{ "curve": "stepped" },
+					{ "time": 1 }
+				]
+			},
+			"UpperArm_L": {
+				"rotate": [
+					{ "angle": -0.49 },
+					{ "time": 0.2333, "angle": -76 },
+					{ "time": 0.3667, "angle": -91.65 },
+					{ "time": 0.4333, "angle": 22.77 },
+					{ "time": 0.5667, "angle": 18.92 },
+					{ "time": 1, "angle": -0.49 }
+				]
+			},
+			"Forearm_L": {
+				"rotate": [
+					{ "angle": 0.81 },
+					{ "time": 0.1, "angle": 3.78 },
+					{ "time": 0.2333, "angle": -6.48 },
+					{ "time": 0.3667, "angle": -62.11 },
+					{ "time": 0.4333, "angle": 13.14 },
+					{ "time": 0.5667, "angle": 23.42 },
+					{ "time": 1, "angle": 0.81 }
+				]
+			},
+			"Hand_L": {
+				"rotate": [
+					{ "angle": 1.91 },
+					{ "time": 0.1, "angle": 28.47 },
+					{ "time": 0.2333, "angle": 4.45 },
+					{ "time": 0.3667, "angle": -5.11 },
+					{ "time": 0.4333, "angle": 22.72 },
+					{ "time": 0.5667, "angle": 33.65 },
+					{ "time": 1, "angle": 1.91 }
 				]
 			}
 		}

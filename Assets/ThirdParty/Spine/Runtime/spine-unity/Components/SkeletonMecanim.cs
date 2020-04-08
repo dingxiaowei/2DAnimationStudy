@@ -36,6 +36,7 @@ namespace Spine.Unity {
 
 		[SerializeField] protected MecanimTranslator translator;
 		public MecanimTranslator Translator { get { return translator; } }
+		private bool wasUpdatedAfterInit = true;
 
 		#region Bone Callbacks (ISkeletonAnimation)
 		protected event UpdateBonesDelegate _UpdateLocal;
@@ -61,12 +62,17 @@ namespace Spine.Unity {
 		#endregion
 
 		public override void Initialize (bool overwrite) {
-			if (valid && !overwrite) return;
+			if (valid && !overwrite)
+				return;
+
 			base.Initialize(overwrite);
-			if (!valid) return;
+
+			if (!valid)
+				return;
 
 			if (translator == null) translator = new MecanimTranslator();
 			translator.Initialize(GetComponent<Animator>(), this.skeletonDataAsset);
+			wasUpdatedAfterInit = false;
 		}
 
 		public void Update () {
@@ -106,6 +112,13 @@ namespace Spine.Unity {
 				if (_UpdateComplete != null)
 					_UpdateComplete(this);
 			}
+			wasUpdatedAfterInit = true;
+		}
+
+		public override void LateUpdate () {
+			// instantiation can happen from Update() after this component, leading to a missing Update() call.
+			if (!wasUpdatedAfterInit) Update();
+			base.LateUpdate();
 		}
 
 		[System.Serializable]
@@ -272,7 +285,7 @@ namespace Spine.Unity {
 						for (; c < clipInfoCount; c++) {
 							var info = clipInfo[c]; float weight = info.weight * layerWeight; if (weight == 0) continue;
 							GetAnimation(info.clip).Apply(skeleton, 0, AnimationTime(stateInfo.normalizedTime, info.clip.length, stateInfo.loop, stateInfo.speed < 0), stateInfo.loop, null, 1f, layerBlendMode, MixDirection.In);
-							break;
+							++c; break;
 						}
 						// Mix the rest
 						for (; c < clipInfoCount; c++) {
@@ -287,7 +300,7 @@ namespace Spine.Unity {
 								for (; c < nextClipInfoCount; c++) {
 									var info = nextClipInfo[c]; float weight = info.weight * layerWeight; if (weight == 0) continue;
 									GetAnimation(info.clip).Apply(skeleton, 0, AnimationTime(nextStateInfo.normalizedTime, info.clip.length, nextStateInfo.speed < 0), nextStateInfo.loop, null, 1f, layerBlendMode, MixDirection.In);
-									break;
+									++c; break;
 								}
 							}
 							// Mix the rest
@@ -306,7 +319,7 @@ namespace Spine.Unity {
 									float clipWeight = shallInterpolateWeightTo1 ? (info.weight + 1.0f) * 0.5f : info.weight;
 									float weight = clipWeight * layerWeight; if (weight == 0) continue;
 									GetAnimation(info.clip).Apply(skeleton, 0, AnimationTime(interruptingStateInfo.normalizedTime + interruptingClipTimeAddition, info.clip.length, interruptingStateInfo.speed < 0), interruptingStateInfo.loop, null, 1f, layerBlendMode, MixDirection.In);
-									break;
+									++c; break;
 								}
 							}
 							// Mix the rest

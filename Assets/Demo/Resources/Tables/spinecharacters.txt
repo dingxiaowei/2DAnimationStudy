@@ -1,0 +1,1 @@
+[{"id":1, "path":"Prefab/Character/Character_SpineBoy","dir":1}, {"id":2, "path":"Prefab/Character/Character_SpineBoy1","dir":0}]

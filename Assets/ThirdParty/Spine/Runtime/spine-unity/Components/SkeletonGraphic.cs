@@ -59,6 +59,7 @@ namespace Spine.Unity {
 		public bool freeze;
 		public bool unscaledTime;
 
+		private bool wasUpdatedAfterInit = true;
 		private Texture baseTexture = null;
 
 		#if UNITY_EDITOR
@@ -212,9 +213,12 @@ namespace Spine.Unity {
 			}
 
 			if (UpdateComplete != null) UpdateComplete(this);
+			wasUpdatedAfterInit = true;
 		}
 
 		public void LateUpdate () {
+			// instantiation can happen from Update() after this component, leading to a missing Update() call.
+			if (!wasUpdatedAfterInit) Update(0);
 			if (freeze) return;
 			//this.SetVerticesDirty(); // Which is better?
 			UpdateMesh();
@@ -231,6 +235,10 @@ namespace Spine.Unity {
 
 		/// <summary>OnRebuild is raised after the Skeleton is successfully initialized.</summary>
 		public event SkeletonRendererDelegate OnRebuild;
+
+		/// <summary>OnMeshAndMaterialsUpdated is at the end of LateUpdate after the Mesh and
+		/// all materials have been updated.</summary>
+		public event SkeletonRendererDelegate OnMeshAndMaterialsUpdated;
 
 		protected Spine.AnimationState state;
 		public Spine.AnimationState AnimationState { get { return state; } }
@@ -313,6 +321,7 @@ namespace Spine.Unity {
 			if (!string.IsNullOrEmpty(initialSkinName))
 				skeleton.SetSkin(initialSkinName);
 
+			wasUpdatedAfterInit = false;
 			if (!string.IsNullOrEmpty(startingAnimation)) {
 				var animationObject = skeletonDataAsset.GetSkeletonData(false).FindAnimation(startingAnimation);
 				if (animationObject != null) {
@@ -321,8 +330,6 @@ namespace Spine.Unity {
 					if (!Application.isPlaying)
 						Update(0f);
 					#endif
-					if (freeze)
-						Update(0f);
 				}
 			}
 
@@ -367,6 +374,8 @@ namespace Spine.Unity {
 			}
 
 			//this.UpdateMaterial(); // TODO: This allocates memory.
+			if (OnMeshAndMaterialsUpdated != null)
+				OnMeshAndMaterialsUpdated(this);
 		}
 		#endregion
 	}
