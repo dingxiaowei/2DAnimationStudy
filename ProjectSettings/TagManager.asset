@@ -13,10 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - GroundSoft
+  - GroundHard
+  - ObjectHitCollision
+  - NavigationCollider
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1506953637
+    locked: 0
+  - name: Character
+    uniqueID: 4162964083
     locked: 0
