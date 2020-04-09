@@ -7,6 +7,9 @@ public class CharacterProperty : UnityEntityProperty
     //TODO:属性改变事件
     public new SpineCharacterTable RawData { get { return (SpineCharacterTable)mRawData; } }
 
+    public float RunCD;
+    public bool CanRun;
+
     public override void SetData(object data)
     {
         base.SetData(data);
