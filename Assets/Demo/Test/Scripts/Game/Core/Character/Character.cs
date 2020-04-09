@@ -17,6 +17,7 @@ public class Character : UnityEntity
     {
         base.InitializeBeforeAwake();
         CreateMotor();
+        CreateRunController();
     }
 
     protected override void InitBeforeStart()
@@ -26,7 +27,6 @@ public class Character : UnityEntity
 
     protected virtual void CreateRotater()
     {
-
     }
 
     protected virtual void CreateRunController()
@@ -43,5 +43,10 @@ public class Character : UnityEntity
     {
         mMotor = new CharacterMotor(ComponentsManager.Trans);
         mCharacterMotor = mMotor as CharacterMotor;
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
     }
 }
