@@ -13,12 +13,14 @@ public class Entity
 
     protected EntityProperty mProperty;
     public EntityProperty Property { get { return mProperty; } set { mProperty = value; } }
+    protected EntityStateMachine mStateMachine;
 
     public bool IsAvatar { get { return mProperty.IsAvatar; } }
     public bool IsBelongAvatar { get { return mProperty.IsBelongAvatar; } }
 
     //TODO:添加各种Manager
-
+    protected AbilityManager mAbilityManager;
+    public AbilityManager AbilityManager { get { return mAbilityManager; } }
 
     protected virtual void InitializeBeforeAwake()
     {
@@ -74,6 +76,17 @@ public class Entity
     protected virtual void UpdateAnimator()
     {
 
+    }
+
+    protected virtual void CreateStateMachine()
+    {
+        mStateMachine = new EntityStateMachine(this);
+    }
+
+    protected virtual void CreateAbilityManager()
+    {
+        mAbilityManager = new AbilityManager();
+        mAbilityManager.OnAbilityTriggered += mStateMachine.OnAbilityTriggered;
     }
 
     public void InternalDestroy()

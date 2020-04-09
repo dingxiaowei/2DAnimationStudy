@@ -45,6 +45,11 @@ namespace Base.Game.Core.UnityComponent
             mIsMove = Animator.StringToHash("IsMove");
         }
 
+        public void SetIsRunning(bool isRunning)
+        {
+            mAnimator.SetBool(mIsRunning, isRunning);
+        }
+
         public void TriggerDie()
         {
             mAnimator.SetTrigger(mDie);

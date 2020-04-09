@@ -24,5 +24,29 @@ public class CharacterCreatorData
 
 public class CharacterCreator
 {
-    //private System.Action<Character>
+    private System.Action<Character> mCallBack;
+    public CharacterCreatorData Data { get; private set; }
+    public Character Character { get; private set; }
+    private bool mIsInBattle;
+
+    public CharacterCreator(CharacterCreatorData data, bool isInBattle, System.Action<Character> callback)
+    {
+        Data = data;
+        mIsInBattle = isInBattle;
+        mCallBack = callback;
+
+        Create();
+    }
+
+    private void Create()
+    {
+        var rawData = DataManager.Instance.GetSpineCharacterTableInfo(Data.CharacterId);
+        if(rawData == null)
+        {
+            Debug.LogError($"CharacterId({Data.CharacterId}) not exist");
+            return;
+        }
+
+        
+    }
 }
