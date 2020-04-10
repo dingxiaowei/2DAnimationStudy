@@ -2,17 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterStateBase : MonoBehaviour
+public class CharacterStateBase : EntityStateBase
 {
-    // Start is called before the first frame update
-    void Start()
+    protected Character mCharacterEntity;
+    public Character CharacterEntity
     {
-        
+        get
+        {
+            if (mCharacterEntity == null)
+            {
+                mCharacterEntity = mEntity as Character;
+            }
+            return mCharacterEntity;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public CharacterStateBase() : base()
     {
-        
+
+    }
+
+    public override void RegisterEvents()
+    {
+        base.RegisterEvents();
+    }
+
+    public override void BeginEnter()
+    {
+        base.BeginEnter();
+    }
+
+    protected sealed override void OnAbilityTriggeredEvent(EntityAbilityEventsArgs args)
+    {
+        base.OnAbilityTriggeredEvent(args);
+        OnCharacterAbilityTriggered(args);
+    }
+
+    protected virtual void OnCharacterAbilityTriggered(EntityAbilityEventsArgs args)
+    {
+
     }
 }

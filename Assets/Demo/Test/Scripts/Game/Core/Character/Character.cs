@@ -8,6 +8,8 @@ public class Character : UnityEntity
     public CharacterProperty CharacterProperty { get { return mProperty as CharacterProperty; } set { mProperty = value; } }
     protected CharacterMotor mCharacterMotor;
     public CharacterMotor CharacterMotor { get { return mCharacterMotor; } }
+
+    protected CharacterRun mRunController;
     public Character() : base()
     {
 
@@ -18,6 +20,7 @@ public class Character : UnityEntity
         base.InitializeBeforeAwake();
         CreateMotor();
         CreateRunController();
+        CharacterProperty.OnAttributeChangedEvent += OnPropertyChanged;
     }
 
     protected override void InitBeforeStart()
@@ -25,18 +28,10 @@ public class Character : UnityEntity
         base.InitBeforeStart();
     }
 
-    protected virtual void CreateRotater()
-    {
-    }
-
     protected virtual void CreateRunController()
     {
-
-    }
-
-    protected virtual void UpdateRotater()
-    {
-
+        mRunController = new CharacterRun(this);
+        mRunController?.InitBeforeAwake();
     }
 
     protected override void CreateMotor()
@@ -45,8 +40,21 @@ public class Character : UnityEntity
         mCharacterMotor = mMotor as CharacterMotor;
     }
 
+    protected override void CreateStateMachine()
+    {
+        mStateMachine = new EntityStateMachine(this);
+    }
+
     protected override void OnDestroy()
     {
         base.OnDestroy();
+    }
+
+    protected void OnPropertyChanged(EnumCharacterAttr attrType, float value)
+    {
+        if (mCharacterMotor != null)
+        {
+            
+        }
     }
 }

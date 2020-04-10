@@ -6,6 +6,8 @@ namespace Base.Game.Core.CustomPhysics
 {
     public class CharacterMotor : UnityEntityMotor
     {
+        protected float mLocalForwardSpeed;
+
         public CharacterMotor(Transform trans) : base(trans)
         {
 
@@ -24,6 +26,11 @@ namespace Base.Game.Core.CustomPhysics
         public override void InitBeforeStart(Transform trans)
         {
             base.InitBeforeStart(trans);
+        }
+
+        public virtual void SetInternalLocalInputSpeed(Vector2 inputSpeed)
+        {
+            mInternalNormalizedInput = inputSpeed;
         }
     }
 }

@@ -33,5 +33,6 @@ namespace Msg
         EntityStateReborn,
         EntityStateSkill,
         EntityStateShoot,
+        EntityStateMax
     }
 }

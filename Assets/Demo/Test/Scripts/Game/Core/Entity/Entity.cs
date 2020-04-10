@@ -25,11 +25,12 @@ public class Entity
     protected virtual void InitializeBeforeAwake()
     {
         //Create各种系统
+        CreateAbilityManager();
     }
 
     protected virtual void InitBeforeStart()
     {
-
+        
     }
 
     protected virtual void Start()

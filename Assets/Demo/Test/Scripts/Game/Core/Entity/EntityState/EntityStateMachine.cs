@@ -60,6 +60,7 @@ public class EntityStateMachine
     protected virtual void Build()
     {
         BuildStateMap();
+        BuildAllStates();
     }
 
     protected virtual void BuildStateMap()
@@ -80,5 +81,9 @@ public class EntityStateMachine
         {
             return mRootState.PeekChildren() as EntityStateBase;
         }
+    }
+
+    protected virtual void BuildAllStates()
+    {
     }
 }

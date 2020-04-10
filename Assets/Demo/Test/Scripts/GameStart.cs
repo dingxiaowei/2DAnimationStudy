@@ -32,6 +32,7 @@ public class GameStart : MonoBehaviour
         mMgrList = new List<IMgr>();
         mMgrList.Add(TimeManager.Instance);
         mMgrList.Add(DataManager.Instance);
+        mMgrList.Add(InputManager.Instance);
 
         foreach(var mgr in mMgrList)
         {
